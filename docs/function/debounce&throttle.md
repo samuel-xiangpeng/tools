@@ -4,19 +4,63 @@
 
 ## 函数节流
 
-### 介绍
+<code>_throttle(callback, wait)</code>
+
+##### <strong>描述</strong>
+创建一个节流函数，在 wait 秒内最多执行 func 一次的函数。
+
+##### <strong>参数</strong>
+func (Function): 要节流的函数。
+[wait=0] (number): 需要节流的毫秒。
+
+##### <strong>返回</strong>
+(Function): 返回节流的函数。
 
 ### 示例
 
+```javascript
+function a() {
+    console.log("滚动了🤓")
+};
+window.onscroll = _throttle(a, 3000)
+```
+
 ### 代码实现
+
+>实现思路：设置一个<code>lock锁</code>，初次执行打开，后面设置关闭，只有在规定时间结束后函数执行才再次打开。
+```javascript
+// 函数防抖
+function _throttle(callback,wait=0){
+    let lock = true;
+    return ()=>{
+        if(!lock == true){
+            return ;
+        }
+        lock = false;
+        setTimeout(()=>{
+            lock = true
+            callback()
+        },wait)
+    }
+}
+```
 
 
 ## 函数防抖
 
-### 介绍
 
-1. 语法: _debounce(callback, wait)
-2. 功能: 创建一个防抖动函数，该函数会从上一次被调用后，延迟 wait 毫秒后调用 callback
+<code>_debounce(callback, wait)</code>
+
+##### <strong>描述</strong>
+创建一个防抖动函数，该函数会从上一次被调用后，延迟 wait 毫秒后调用 callback
+
+##### <strong>参数</strong>
+func (Function): 要防抖动的函数。
+[wait=0] (number): 需要延迟的毫秒数。
+
+##### <strong>返回</strong>
+(Function): 返回新的 debounced（防抖动）函数。
+
 
 ### 示例
 
@@ -29,20 +73,16 @@ window.onscroll = _debounce(a, 3000)
 
 ### 代码实现
 
->实现思路：设置一个<code>lock锁</code>，初次执行打开，后面设置关闭，只有在规定时间结束后函数执行才再次打开。
+>实现思路：设置一个延时器，如果再次执行清除上一个延时器生成新的延时器。
 ```javascript
 // 函数防抖
-function _debounce(callback,wait){
-    let lock = true;
+function _debounce(callback,wait=0){
+    let time = null;
     return ()=>{
-        if(!lock == true){
-            return ;
+        if(time){
+            clearTimeout(time)
         }
-        lock = false;
-        setTimeout(()=>{
-            lock = true
-            callback()
-        },wait)
+        time = setTimeout(callback,wait)
     }
 }
 ```

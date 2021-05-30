@@ -1,14 +1,10 @@
 // 函数防抖
-function _debounce(fn,time){
-    let lock = true;
+function _debounce(callback,wait=0){
+    let time = null;
     return ()=>{
-        if(!lock == true){
-            return ;
+        if(time){
+            clearTimeout(time)
         }
-        lock = false;
-        setTimeout(()=>{
-            lock = true
-            fn()
-        },time)
+        time = setTimeout(callback,wait)
     }
 }
