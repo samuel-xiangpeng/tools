@@ -6,3 +6,23 @@
 6. <code>.then</code>方法的实现
 7. <code>.then</code>方法在executor异步函数的时候任然可以实现。
 8. <code>.then</code>链式调用实现
+9. .then方法中的函数是异步执行的
+
+## promise.catch方法实现以及异常穿透处理
+
+<code>异常穿透处理</code>
+```javascript
+const p = new Promise((resolve,reject)=>{
+    resolve("success")
+})
+p.then((v)=>{
+     return v 
+   })
+   .then((v)=>{
+       throw new error
+       return v
+   })
+   .catch((err)=>{
+       console.log(err)
+   })
+```
