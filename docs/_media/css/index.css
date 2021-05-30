@@ -1,0 +1,61 @@
+.cover-btn {
+    border-radius: 2rem;
+    border: 1px solid #3F51B5;
+    box-sizing: border-box;
+    color: #3F51B5;
+    display: inline-block;
+    font-size: 1.05rem;
+    letter-spacing: .1rem;
+    margin: .5rem 1rem;
+    padding: .75em 2rem;
+    text-decoration: none;
+    transition: all .15s ease;
+}
+
+a.cover-btn:last-child {
+    background-color: #3F51B5;
+    color: #fff !important;
+}
+
+a.cover-btn:hover {
+    color: black;
+}
+
+a.cover-btn:last-child:hover {
+    background-color: #a0abe9;
+    color: #eee !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #8c9aec !important;
+}
+
+body .content .pagination-item-title {
+    margin-top: 2px;
+    font-size: 1.4em;
+}
+
+
+/* logo */
+
+.app-name img {
+    width: 5rem;
+    opacity: .8;
+}
+
+.sidebar {
+    max-width: 280px;
+}
+
+
+/* 复制代码按钮 */
+
+pre .docsify-copy-code-button {
+    border-radius: .4em;
+    font-size: .5em;
+    background-color: #a0abe9;
+}

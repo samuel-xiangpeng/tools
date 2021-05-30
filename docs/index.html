@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tools</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <!-- 设置favicon.ico图标 -->
+    <link rel="icon" type="image/x-icon" href="./_media/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <link rel="stylesheet" href="./_media/css/index.css">
+</head>
+
+<body>
+    <div id="app">加载中...</div>
+    <script>
+        window.$docsify = {
+            name: '<span>tools</span>',
+            repo: 'https://github.com/samuel-xiangpeng',
+            nameLink: '/', //网站name链接
+            themeColor: '#3F51B5', //自定义主题颜色
+            logo: '/_media/logo.png',
+            subMaxLevel: 3,
+            loadSidebar: true,
+            autoHeader: true,
+            coverpage: true,
+            mergeNavbar: true, //小屏幕合并导航栏
+            pagination: {
+                previousText: '上一章节',
+                nextText: '下一章节',
+                crossChapter: true,
+                crossChapterText: true,
+            },
+            copyCode: {
+                buttonText: '复制',
+                errorText: '复制失败',
+                successText: '复制成功'
+            },
+
+        }
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <!-- Latest v2.x.x -->
+    <script src="https://unpkg.com/docsify-copy-code@2"></script>
+
+</body>
+
+</html>

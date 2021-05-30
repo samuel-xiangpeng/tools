@@ -1,0 +1,8 @@
+{
+    "name": "tools",
+    "version": "1.0.0",
+    "description": "自定义工具函数库，重点是加深自己对js的理解",
+    "main": "index.js",
+    "author": "samuel",
+    "license": "MIT"
+}
