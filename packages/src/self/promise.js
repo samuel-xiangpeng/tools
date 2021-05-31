@@ -2,7 +2,7 @@ const PENDING = "pending";
 const RESOLVED = 'resolved';
 const REJECTED = 'rejected';
 
-function _Promise(executor) {
+export function _Promise(executor) {
     // promise状态
     this.promsieState = PENDING;
     // 存储resolve和reject函数结果
@@ -104,14 +104,14 @@ _Promise.prototype.then = function (onResolved, onRejected) {
 /*
     实现promsie的catch方法
 */
-Promise.prototype.catch = function (onRejected) {
+_Promise.prototype.catch = function (onRejected) {
     return this.then(undefined, onRejected)
 }
 
 /*
     实现promise的resolve方法
 */
-Promise.resolve = function (value) {
+_Promise.resolve = function (value) {
     return new Promise((resolve, reject) => {
         if (value instanceof Promise) {
             value.then((v) => {
@@ -129,7 +129,7 @@ Promise.resolve = function (value) {
 /*
     实现promise的reject方法
 */
-Promise.reject = function (value) {
+_Promise.reject = function (value) {
     return new Promise((resolve, reject) => {
         reject(value)
     })

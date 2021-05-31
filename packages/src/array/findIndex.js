@@ -1,6 +1,6 @@
-function _findIndex(arr, callback) {
+export function _findIndex(arr, callback) {
     for (i = 0; i < arr.length; i++) {
-        if(callback(arr[i], i, arr)){
+        if (callback(arr[i], i, arr)) {
             return i
         }
     }

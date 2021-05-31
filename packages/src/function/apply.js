@@ -1,5 +1,5 @@
-function _apply(callback, obj, arg){
-    if (obj===undefined || obj===null) {
+export function _apply(callback, obj, arg) {
+    if (obj === undefined || obj === null) {
         obj = globalThis
     }
     obj.__proto__.callback = callback

@@ -11,33 +11,19 @@
         }
     </style>
     <title>Document</title>
-    <script src="./packages/array/reduce.js"></script>
-    <script src="./packages/array/map.js"></script>
-    <script src="./packages/array/filter.js"></script>
-    <script src="./packages/array/forEach.js"></script>
-    <script src="./packages/array/find.js"></script>
-    <script src="./packages/array/every.js"></script>
-    <script src="./packages/array/unique.js"></script>
-    <script src="./packages/array/flatten.js"></script>
-    <script src="./packages/array/chunk.js"></script>
-    <script src="./packages/object/new.js"></script>
-    <script src="./packages/object/instanceof.js"></script>
+    <script src="./packages/dist/ytools.js"></script>
 </head>
 
 <body>
     <script>
-        function Person(name, age) {
-            this.name = name
-            this.age = age;
-            // return {}
-            // return []
-            // return function (){}
-            // return 1
-            // return undefined
-        }
-
-        const p = new Person('tom', 12)
-        console.log(_instanceof(p, Object))
+        const a = new y._Promise((resolve, reject) => {
+            console.log('成功')
+            resolve('tools')
+        })
+        a.then((value) => {
+            console.log(value + '21')
+        })
+        console.log(y)
     </script>
 </body>
 

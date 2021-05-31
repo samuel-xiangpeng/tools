@@ -1,13 +1,13 @@
 // 数组扁平化
 
-function _flatten(arr){
+export function _flatten(arr) {
     return arr.reduce((result, item) => {
-        if(item instanceof Array){
+        if (item instanceof Array) {
             return result.concat(_flatten(item))
         }
         else {
             return result.concat(item)
         }
-    },[])
+    }, [])
 }
 

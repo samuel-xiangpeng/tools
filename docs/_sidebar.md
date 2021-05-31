@@ -12,5 +12,6 @@
     * [自定义instanceof](/object/instanceof.md)
     * [对象合并](/object/mergeObject.md)
 * [字符串](#)
+    * [字符串倒序](/string/reverseString.md)
 * [自定义实现promise](/self/promise.md)
-* [自定义实现消息订阅与发布](#)
+* [自定义实现AJAX](/self/ajax.md)

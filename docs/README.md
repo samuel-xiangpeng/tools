@@ -25,15 +25,23 @@
 <code>npm安装</code>
 
 ```javascript
-npm install a-utils2
+npm install ytoolsjs
+```
+
+<code>yarn安装</code>
+
+```javascript
+yarn add ytoolsjs
 ```
 
 <code>网页中引入并使用</code>
 
 ```javascript
-<script src="./node_modules/a-utils2/dist/atguigu-utils.js"></script>
+<script src="./node_modules/ytoolsjs/dist/ytools.js"></script>
 <script>
-  aUtils.test()
+  new y._Promise((resolve, reject) => {
+    resolve('测试')
+  })
 </script>
 ```
 
@@ -41,10 +49,14 @@ npm install a-utils2
 
 ```javascript
 // 使用ESM引入
-import {test} from 'a-utils2'
-test()
+import {_Promise} from 'ytoolsjs'
+new _Promise((resolve, reject) => {
+    resolve('测试')
+  })
 
 // 使用commonjs引入
-const {test} = require('a-utils2')
-test()
+const {_Promise} = require('ytoolsjs')
+new _Promise((resolve, reject) => {
+    resolve('测试')
+  })
 ```

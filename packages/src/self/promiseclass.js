@@ -1,7 +1,7 @@
 const PENDING = "pending";
 const RESOLVED = 'resolved';
 const REJECTED = 'rejected';
-class Promise {
+export class _Promise {
     constructor(executor) {
         // promise状态
         this.promsieState = PENDING;
@@ -46,7 +46,7 @@ class Promise {
         if (typeof onRejected !== 'function') {
             onRejected = reason => { throw reason };
         }
-    
+
         //如果.then第一个参数onResolved没有传递，那么就给你默认值
         if (typeof onResolved !== "function") {
             onResolved = value => value;

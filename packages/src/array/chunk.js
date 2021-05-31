@@ -1,4 +1,4 @@
-function _chunk(arr, size) {
+export function _chunk(arr, size) {
     let newArr = []
     let count = 0;
     let sizeArr = []
@@ -11,7 +11,7 @@ function _chunk(arr, size) {
             newArr.push(sizeArr)
             sizeArr = []
         }
-        if(i >= size * (arr.length / size) -1){
+        if (i >= size * (arr.length / size) - 1) {
             newArr.push(R)
             break;
         }

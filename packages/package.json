@@ -1,0 +1,26 @@
+{
+    "name": "ytoolsjs",
+    "version": "1.0.4",
+    "description": "一个简单的工具包",
+    "main": "./dist/ytools.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "webpack:watch": "webpack --watch"
+    },
+    "keywords": [
+        "tools",
+        "array",
+        "object",
+        "function",
+        "string",
+        "ajax",
+        "promise"
+    ],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "path": "^0.12.7",
+        "webpack": "^5.38.1",
+        "webpack-cli": "^4.7.0"
+    }
+}
