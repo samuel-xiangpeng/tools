@@ -3,7 +3,7 @@
     * [函数节流&函数防抖](/function/debounce&throttle.md)
     * [call & apply & bind](/function/call&apply&bind.md)
 * [数组](#)
-    * [数组基本API](#)
+    * [数组基本API](/array/array.md)
     * [数组去重](#)
     * [数组扁平化](#)
     * [数组分块](#)

@@ -11,11 +11,21 @@
         }
     </style>
     <title>Document</title>
-    <script src="./packages/promiseclass.js"></script>
+    <script src="./packages/array/reduce.js"></script>
+    <script src="./packages/array/map.js"></script>
+    <script src="./packages/array/filter.js"></script>
+    <script src="./packages/array/forEach.js"></script>
+    <script src="./packages/array/find.js"></script>
+    <script src="./packages/array/every.js"></script>
 </head>
 
 <body>
     <script>
+        let arr = [1, 2, 45, 56, 6]
+        let b = _every(arr, (item, index, arr) => {
+            return item > 10
+        })
+        console.log(b)
     </script>
 </body>
 
