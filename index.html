@@ -17,14 +17,13 @@
     <script src="./packages/array/forEach.js"></script>
     <script src="./packages/array/find.js"></script>
     <script src="./packages/array/every.js"></script>
+    <script src="./packages/array/unique.js"></script>
 </head>
 
 <body>
     <script>
-        let arr = [1, 2, 45, 56, 6]
-        let b = _every(arr, (item, index, arr) => {
-            return item > 10
-        })
+        let arr = [1, 2, 45, 45, 56, 6, 2, 6]
+        let b = _unique(arr)
         console.log(b)
     </script>
 </body>

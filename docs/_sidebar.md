@@ -4,7 +4,7 @@
     * [call & apply & bind](/function/call&apply&bind.md)
 * [数组](#)
     * [数组基本API](/array/array.md)
-    * [数组去重](#)
+    * [数组去重](/array/unique.md)
     * [数组扁平化](#)
     * [数组分块](#)
 * [对象](#)
