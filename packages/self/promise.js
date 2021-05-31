@@ -2,7 +2,7 @@ const PENDING = "pending";
 const RESOLVED = 'resolved';
 const REJECTED = 'rejected';
 
-function Promise(executor) {
+function _Promise(executor) {
     // promise状态
     this.promsieState = PENDING;
     // 存储resolve和reject函数结果
@@ -45,7 +45,7 @@ function Promise(executor) {
     实现.then方法
 */
 
-Promise.prototype.then = function (onResolved, onRejected) {
+_Promise.prototype.then = function (onResolved, onRejected) {
     let self = this;
     // 如果.then没有传递onRejected函数，那么就指定onRejected函数
     if (typeof onRejected !== 'function') {
