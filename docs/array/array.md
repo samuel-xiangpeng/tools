@@ -295,3 +295,4 @@ function _some(arr, callback) {
     }
     return false
 }
+```
