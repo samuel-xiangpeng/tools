@@ -1,6 +1,7 @@
 # <a data-id='doc'>开始</a>
 
 [在线文档](https://samuel-xiangpeng.github.io/tools/#/)
+[在线文档(vercel)](https://tools-khaki-one.vercel.app/#/)
 
 > An awesome project.🤣
 
